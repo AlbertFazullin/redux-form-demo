@@ -1,0 +1,7 @@
+{
+  "extends": "fs",
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "react/no-multi-comp": [2, { "ignoreStateless": true }]
+  }
+}
