@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 
 import Input from '../common/inputs/Input/Input';
-import s from './filter.pcss';
+import s from './profileEdit.pcss';
 
 import submit from './submit';
 
-const Filter = ({ reset, handleSubmit }) =>
+const ProfileEdit = ({ reset, handleSubmit }) =>
   <div className={ s.wrapper }>
     <form onSubmit={ handleSubmit(submit) }>
       <div className={ s.filterItem }>
         <h4 className={ s.filterTitle }>
-          Simple text input
+          Username
         </h4>
         <Field
           component={ Input }
           type="text"
-          placeholder="Placeholder"
+          placeholder="John Doe"
           name="text input"
         />
       </div>
@@ -36,11 +36,11 @@ const Filter = ({ reset, handleSubmit }) =>
     </form>
   </div>;
 
-Filter.propTypes = {
+ProfileEdit.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   reset: PropTypes.func.isRequired,
 };
 
 export default reduxForm({
-  form: 'filter-1',
-})(Filter);
+  form: 'profileEdit',
+})(ProfileEdit);

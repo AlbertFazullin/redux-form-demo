@@ -11,8 +11,6 @@ import Wrapper, {
 
 import Menu from '../components/Menu/Menu';
 import Filter from '../components/Filter/Filter';
-import ProfileEdit from '../components/ProfileEdit/ProfileEdit';
-import './main.pcss';
 
 const Main = () =>
   <Wrapper>
@@ -27,10 +25,7 @@ const Main = () =>
       </Sidebar>
       <MainContent>
         <MainItem>
-          <div>Forms will be here (everywhere)</div>
-        </MainItem>
-        <MainItem>
-          <ProfileEdit />
+          <div>git checkout step-1</div>
         </MainItem>
       </MainContent>
     </Content>

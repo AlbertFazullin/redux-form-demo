@@ -7,7 +7,7 @@ const Menu = () =>
     <div className={ s.logo }>Crafted</div>
     <div className={ s.links }>
       <IndexLink to="/" activeClassName={ s.active }>Index</IndexLink>
-      <Link to="/step-2" activeClassName={ s.active }>Step 2</Link>
+      <Link to="/step-1" activeClassName={ s.active }>Step 1</Link>
     </div>
   </div>;
 
