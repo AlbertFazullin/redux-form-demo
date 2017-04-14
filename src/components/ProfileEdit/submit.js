@@ -1,5 +1,5 @@
 const submit = values => {
-  // TODO form submit
+  alert(JSON.stringify(values));
 };
 
 export default submit;
