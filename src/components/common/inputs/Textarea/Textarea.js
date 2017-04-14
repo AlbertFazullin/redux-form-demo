@@ -6,9 +6,9 @@ const Textarea = ({ input, placeholder, limit }) =>
   <div>
     <label className={ s.wrapper }>
       <div className={ s.header }>
-        <div className={ s.label }>Textarea</div>
+        <div className={ s.label }>Counter row</div>
         {limit &&
-          <div className={ input && input.value.length < limit ? s.counter : s['counter-exhausted'] }>
+          <div className={ (input && input.value.length < limit) || !limit ? s.counter : s['counter-exhausted'] }>
             { input ? input.value.length : 0 }/{ limit } characters
           </div>
         }
@@ -17,7 +17,7 @@ const Textarea = ({ input, placeholder, limit }) =>
         rows={ 10 }
         { ...input }
         placeholder={ placeholder }
-        className={ input && input.value.length < limit ? s.textarea : s['textarea-exhausted'] }
+        className={ (input && input.value.length < limit) || !limit ? s.textarea : s['textarea-exhausted'] }
       />
     </label>
   </div>;
