@@ -9,6 +9,7 @@ const Menu = () =>
       <IndexLink to="/" activeClassName={ s.active }>Index</IndexLink>
       <Link to="/step-1" activeClassName={ s.active }>Step 1</Link>
       <Link to="/step-2" activeClassName={ s.active }>Step 2</Link>
+      <Link to="/step-3" activeClassName={ s.active }>Step 3</Link>
     </div>
   </div>;
 
