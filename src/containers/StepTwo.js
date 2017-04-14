@@ -11,7 +11,6 @@ import Wrapper, {
 
 import Menu from '../components/Menu/Menu';
 import Filter from '../components/Filter/Filter';
-import ProfileEdit from '../components/ProfileEdit/ProfileEdit';
 
 const Main = () =>
   <Wrapper>
@@ -26,10 +25,7 @@ const Main = () =>
       </Sidebar>
       <MainContent>
         <MainItem>
-          <div>Forms will be here (everywhere)</div>
-        </MainItem>
-        <MainItem>
-          <ProfileEdit />
+          <div>git checkout step-2</div>
         </MainItem>
       </MainContent>
     </Content>
