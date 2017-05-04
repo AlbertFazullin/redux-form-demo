@@ -5984,6 +5984,12 @@ react-range-slider@^0.2.1:
   dependencies:
     object-assign ">=2.0.0"
 
+react-redux-loading-bar@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/react-redux-loading-bar/-/react-redux-loading-bar-2.9.0.tgz#408fffb02775203ee6e97e168b57cbd8264e66c3"
+  dependencies:
+    prop-types "^15.5.6"
+
 react-redux@^5.0.4:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.4.tgz#1563babadcfb2672f57f9ceaa439fb16bf85d55b"

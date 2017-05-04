@@ -2,6 +2,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import createSagaMiddleware from 'redux-saga';
+import { loadingBarMiddleware } from 'react-redux-loading-bar';
 
 import rootSaga from '../sagas';
 
@@ -14,7 +15,9 @@ const saga = createSagaMiddleware();
 const composeEnhancers = composeWithDevTools({});
 
 const enhancer = composeEnhancers(
-    applyMiddleware(saga)
+  applyMiddleware(saga, loadingBarMiddleware({
+    promiseTypeSuffixes: ['REQUEST', 'SUCCESS', 'FAILURE'],
+  }))
 );
 
 const store = createStore(rootReducer, initialState, enhancer);
