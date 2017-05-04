@@ -1,32 +1,24 @@
-import { getCurrentUser, changeLocale } from './api';
+import getUser from './api';
 import { put, takeLatest, call } from 'redux-saga/effects';
-import actionTypes from '../actions/actionTypes';
-import userActions from '../actions/userActions';
+import actionTypes from '../redux/actionTypes';
+import { userActions } from '../redux/userDuck';
 
 const {
-  getCurrentUserSuccess,
-  getCurrentUserFailure,
+  getUserSuccess,
+  getUserFailure,
 } = userActions;
-const { GET_CURRENT_USER_REQUEST, CHANGE_LOCALE } = actionTypes;
+const { GET_USER_REQUEST } = actionTypes;
 
-export function* getUserSaga() {
-  yield takeLatest(GET_CURRENT_USER_REQUEST, getUser);
+export default function* () {
+  yield takeLatest(GET_USER_REQUEST, callGetUser);
 }
 
-function* getUser() {
+function* callGetUser() {
   try {
-    const res = yield call(getCurrentUser);
-    yield put(getCurrentUserSuccess(res.body.data));
+    const res = yield call(getUser);
+    yield put(getUserSuccess(res.body));
   } catch (e) {
-    yield put(getCurrentUserFailure(e));
+    yield put(getUserFailure(e));
   }
 }
 
-export function* changeLocaleSaga() {
-  yield takeLatest(CHANGE_LOCALE, callChangeLocale);
-}
-
-function* callChangeLocale(action) {
-  yield call(changeLocale, action.payload.locale);
-  yield window.location.reload(true);
-}

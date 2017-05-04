@@ -5,7 +5,7 @@ import createSagaMiddleware from 'redux-saga';
 
 import rootSaga from '../sagas';
 
-import rootReducer from '../reducers';
+import rootReducer from '../redux';
 
 const initialState = window.__INITIAL_STATE__;
 
@@ -20,7 +20,7 @@ const enhancer = composeEnhancers(
 const store = createStore(rootReducer, initialState, enhancer);
 
 if (module.hot) {
-  module.hot.accept('../reducers', () =>
+  module.hot.accept('../redux', () =>
     store.replaceReducer(rootReducer)
   );
 }

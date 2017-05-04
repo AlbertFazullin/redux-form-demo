@@ -1,4 +1,4 @@
-import actionTypes from '../actions/actionTypes';
+import actionTypes from './actionTypes';
 
 const { GET_CURRENT_USER_SUCCESS } = actionTypes;
 

@@ -1,4 +1,4 @@
-import actionTypes from '../actions/actionTypes';
+import actionTypes from './actionTypes';
 
 const { TOGGLE_MOBILE_FILTERS } = actionTypes;
 

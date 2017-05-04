@@ -1,5 +1,5 @@
 import { actionCreator } from 'redux-action-creator';
-import actionTypes from './actionTypes';
+import actionTypes from '../redux/actionTypes';
 
 const {
   GET_CURRENT_USER_REQUEST,

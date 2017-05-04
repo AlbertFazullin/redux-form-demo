@@ -1,9 +1,11 @@
-.filterSelect{
+@import "../../vars.pcss";
+
+.filterSelect {
   position: relative;
   z-index: 10;
 }
 
-.filterInput{
+.filterInput {
   width: 100%;
   height: 40px;
   padding: 8px 30px 8px 10px;
@@ -14,7 +16,7 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
-  color: #333;
+  color: $commonPrimary;
   cursor: pointer;
   outline: none;
   overflow: hidden;
@@ -23,20 +25,23 @@
   box-sizing: border-box;
 }
 
-.selectControl{
+.selectControl {
   position: relative;
   z-index: 1;
 }
 
-.arrow{
-  position: absolute;
+.arrow {
+  position: absolute 15px 13px auto auto;
   z-index: 2;
-  top: 12px;
-  right: 13px;
   height: 16px;
+
+  cursor: pointer;
+
+  size: size("i-arrow-dropdown.svg");
+  background: svg-load("i-arrow-dropdown.svg", fill=#8c8c8c);
 }
 
-.filterDropDown{
+.filterDropDown {
   position: relative;
   z-index: 11;
   left: 0;
@@ -46,7 +51,7 @@
   overflow: visible;
 }
 
-.filterDropDownInner{
+.filterDropDownInner {
   position: absolute;
   top: 5px;
   left: 0;
@@ -60,37 +65,41 @@
   overflow: hidden;
 }
 
-.listDropDownWrap{
+.listDropDownWrap {
   max-height: 330px;
   padding-right: 10px;
   overflow: auto;
   box-sizing: border-box;
 }
 
-.listDropDown{
+.listDropDown {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 14px;
   font-weight: 300;
   line-height: 17px;
-  color: #333;
+  color: $commonPrimary;
 
-  & > li{
+  & > li {
     margin-bottom: 12px;
   }
 }
 
-.itemDropDown{
+.itemDropDown {
+  display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
 .optionCheck {
-  & > object {
-    opacity: 0;
-  }
+  size: size("i-check-dropdown.svg");
+  background: svg-load("i-check-dropdown.svg", fill=#40ab7b);
+  opacity: 0;
 
-  &__active > object {
+  &__active {
+    size: size("i-check-dropdown.svg");
+    background: svg-load("i-check-dropdown.svg", fill=#40ab7b);
     opacity: 1;
   }
 }
@@ -100,6 +109,6 @@
 
   &__active {
     margin-left: 6px;
-    color: #40ab7b;
+    color: $brandPrimary;
   }
 }

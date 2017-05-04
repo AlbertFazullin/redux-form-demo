@@ -23,7 +23,7 @@ const CheckBox = ({ input, fields, defaultChecked }) =>
                 return input.onChange(newValue);
               } }
             />
-            <span className={ s.checkbox__input }><object type="image/svg+xml" data="/i-checkbox.svg" /></span>
+            <span className={ s.checkbox__input }><div className={ s.icon }/></span>
             <span className={ s.checkbox__label }>{ field.label }</span>
           </label>
         </div>

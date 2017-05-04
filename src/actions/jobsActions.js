@@ -1,5 +1,5 @@
 import { actionCreator } from 'redux-action-creator';
-import actionTypes from './actionTypes';
+import actionTypes from '../redux/actionTypes';
 
 const {
   GET_FEATURED_COMPANIES_REQUEST,

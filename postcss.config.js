@@ -1,8 +1,15 @@
 module.exports = {
   plugins: [
     require('postcss-import')({
-      root: '../',
+      root: './',
     }),
+    require('postcss-inline-svg')({
+      removeFill: true,
+    }),
+    require('postcss-assets'),
+    require('postcss-short'),
+    require('postcss-simple-vars'),
+    require('postcss-assets'),
     require('postcss-cssnext')({}),
     require('postcss-font-magician')({
       variants: {

@@ -1,25 +1,30 @@
-.checkboxItem{
+@import "../../vars.pcss";
+
+.checkboxItem {
   margin-bottom: 15px;
 }
 
-[type="checkbox"]{
+[type="checkbox"] {
   display: none;
 }
 
 [type="checkbox"]:checked + .checkbox__input {
-  background-color: #40ab7b;
-  border-color: #40ab7b;
-  & > object {
-    opacity: 1;
+  background-color: $brandPrimary;
+  border-color: $brandPrimary;
+
+  & .icon {
+    position: absolute 2px 0 auto auto;
+    size: size("i-checkbox.svg");
+    background: svg-load("i-checkbox.svg", fill=#fff);
   }
 }
 
-label{
+label {
   display: flex;
   cursor: pointer;
 }
 
-.checkbox__input{
+.checkbox__input {
   position: relative;
   top: 1px;
   border: 2px solid #d8d8d8;
@@ -28,26 +33,11 @@ label{
   border-radius: 2px;
   margin: 0 8px 0 0;
   outline: none;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-
-  & > object {
-    opacity: 0;
-    width: 15px;
-    height: 15px;
-  }
 }
 
 .checkbox__label {
   font-size: 16px;
   font-weight: 300;
   line-height: 17px;
-  color: #333;
+  color: $commonPrimary;
 }

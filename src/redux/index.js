@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import filters from './filters';
-import jobs from './jobs';
 import auth from './auth';
+import user from './userDuck';
 import common from './common';
 import { reducer as formReducer } from 'redux-form';
 
@@ -13,7 +12,7 @@ export default combineReducers({
 
   auth: combineReducers({ ...auth }),
 
-  common: combineReducers({ ...common }),
+  gh: combineReducers({ ...user }),
 
-  jobs: combineReducers({ ...jobs, ...filters }),
+  common: combineReducers({ ...common }),
 });

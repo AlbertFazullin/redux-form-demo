@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>i-check-dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Job-Seeker" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="14" font-family="SFUIDisplay-Bold, SF UI Display" font-weight="bold">
+        <g id="Jobs-Industries-Dropdown" transform="translate(-132.000000, -708.000000)" fill="#40AB7B">
+            <g id="Group-8" transform="translate(98.000000, 292.000000)">
+                <g id="Group-21" transform="translate(24.000000, 245.000000)">
+                    <g id="Group-13">
+                        <text id="i-check-dropdown">
+                            <tspan x="10" y="180">✓</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

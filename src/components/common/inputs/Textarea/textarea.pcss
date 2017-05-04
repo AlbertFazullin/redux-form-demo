@@ -1,3 +1,5 @@
+@import "../../vars.pcss";
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -13,7 +15,7 @@
 }
 
 .label {
-  color: #333;
+  color: $commonPrimary;
   font-size: 13px;
   font-weight: 900;
   line-height: 16px;
@@ -21,10 +23,10 @@
 }
 
 .counter {
-  color: #8c8c8c;
+  color: $commonSecondary;
 
   &-exhausted {
-    color: #d40b0b;
+    color: $errorPrimary;
   }
 }
 
@@ -45,8 +47,8 @@
     width: 100%;
     border: none;
     border-radius: 3px;
-    box-shadow: inset 0 1px 1px 0 #d40b0b;
-    background-color: #f8eaea;
+    box-shadow: inset 0 1px 1px 0 $errorPrimary;
+    background-color: $errorSecondary;
     outline: none;
     text-overflow: ellipsis;
     white-space: nowrap;
