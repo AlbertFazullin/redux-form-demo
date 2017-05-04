@@ -1,18 +1,17 @@
 /**
  * Crafted by x22a on 04.05.17.
  */
-import { createActions } from 'redux-actions';
-import types from './actionTypes';
+import { createRoutine } from 'redux-saga-routines';
 
-const { GET_USER_REQUEST, GET_USER_SUCCESS, GET_USER_FAILURE } = types;
+export const routine = createRoutine('GET_USER');
 
-export const userActions = createActions(GET_USER_REQUEST, GET_USER_SUCCESS, GET_USER_FAILURE);
+const { SUCCESS, FAILURE } = routine;
 
 const ghUser = (state = null, { type, payload }) => {
   switch (type) {
-  case GET_USER_SUCCESS:
+  case SUCCESS:
     return payload;
-  case GET_USER_FAILURE:
+  case FAILURE:
     return null;
   default:
     return state;

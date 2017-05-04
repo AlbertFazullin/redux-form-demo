@@ -11,6 +11,8 @@ import Input from '../common/inputs/Input/Input';
 import bs from '../common/button.pcss';
 import s from './userGH.pcss';
 
+import { routine } from '../../redux/userDuck';
+
 const validate = ({ username }) => {
   const errors = {};
   if (!username) {
@@ -22,9 +24,9 @@ const validate = ({ username }) => {
   return errors;
 };
 
-const UserGH = ({ reset, handleSubmit }) =>
+const UserGH = ({ reset, handleSubmit, pristine, submitting, invalid }) =>
   <div styleName="wrapper">
-    <form onSubmit={ handleSubmit }>
+    <form onSubmit={ handleSubmit(routine) }>
       <div styleName="item">
         <h4 styleName="title">
           Github Username
@@ -37,13 +39,18 @@ const UserGH = ({ reset, handleSubmit }) =>
         />
       </div>
       <div styleName="bottom">
-        <button type="submit" styleName="button button-signin success">
+        <button
+          type="submit"
+          styleName="button button-signin success"
+          disabled={ pristine || submitting || invalid }
+        >
           Submit
         </button>
         <button
           type="button"
           onClick={ reset }
           styleName="button button-signin ghost-success"
+          disabled={ pristine || submitting }
         >
           Reset
         </button>
@@ -53,7 +60,10 @@ const UserGH = ({ reset, handleSubmit }) =>
 
 UserGH.propTypes = {
   handleSubmit: PropTypes.func,
+  invalid: PropTypes.bool,
+  pristine: PropTypes.bool,
   reset: PropTypes.func,
+  submitting: PropTypes.bool,
 };
 
 const styledUserGH = CSSModules(UserGH, { ...s, ...bs }, { allowMultiple: true });

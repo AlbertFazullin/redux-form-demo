@@ -1,24 +1,19 @@
 import getUser from './api';
 import { put, takeLatest, call } from 'redux-saga/effects';
-import actionTypes from '../redux/actionTypes';
-import { userActions } from '../redux/userDuck';
-
-const {
-  getUserSuccess,
-  getUserFailure,
-} = userActions;
-const { GET_USER_REQUEST } = actionTypes;
+import { routine } from '../redux/userDuck';
 
 export default function* () {
-  yield takeLatest(GET_USER_REQUEST, callGetUser);
+  yield takeLatest(routine.TRIGGER, callGetUser);
 }
 
-function* callGetUser() {
+function* callGetUser({ payload: { username }}) {
   try {
-    const res = yield call(getUser);
-    yield put(getUserSuccess(res.body));
+    yield put(routine.request());
+    const res = yield call(getUser, username);
+    yield put(routine.success(res.body));
   } catch (e) {
-    yield put(getUserFailure(e));
+    yield put(routine.failure(e));
+  } finally {
+    yield put(routine.fulfill());
   }
 }
-
