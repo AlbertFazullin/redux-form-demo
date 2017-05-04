@@ -12,6 +12,7 @@ import Wrapper, {
 import Menu from '../components/Menu/Menu';
 import Filter from '../components/Filter/Filter';
 import ProfileEdit from '../components/ProfileEdit/ProfileEdit';
+import UserGH from '../components/UserGH';
 import './main.pcss';
 
 const Main = () =>
@@ -30,7 +31,13 @@ const Main = () =>
           <div>Forms will be here (everywhere)</div>
         </MainItem>
         <MainItem>
-          <ProfileEdit />
+          <div>This one should work</div>
+        </MainItem>
+        <MainItem>
+          <UserGH/>
+        </MainItem>
+        <MainItem>
+          <ProfileEdit/>
         </MainItem>
       </MainContent>
     </Content>
