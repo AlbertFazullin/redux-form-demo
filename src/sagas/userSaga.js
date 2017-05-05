@@ -1,4 +1,4 @@
-import getUser from './api';
+import getUser from '../api';
 import { put, takeLatest, call } from 'redux-saga/effects';
 import { routine } from '../redux/userDuck';
 

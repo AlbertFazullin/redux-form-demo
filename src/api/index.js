@@ -1,5 +1,5 @@
 import request from 'superagent';
-import usersUrl from '../api/urls';
+import usersUrl from './urls';
 
 const getUser = username => request
   .get(`${usersUrl}/${username}`)
